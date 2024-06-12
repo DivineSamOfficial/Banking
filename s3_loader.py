@@ -2,13 +2,13 @@ import boto3
 import os
 
 # AWS credentials and S3 configuration
-aws_access_key_id = 'AKIAVRUVP4WOYS2AAFO4'
-aws_secret_access_key = 'mLP9s6hJ9qwL1/GCEO/02OsacOcBXGTJNkcBdnEz'
-bucket_name = 'bankingdwh'
-base_s3_directory = 'path/in/your/bucket'
+aws_access_key_id = 'YOUR_ACCESS_KEY'
+aws_secret_access_key = 'YOUR_PASSOWRD'
+bucket_name = 'NAME OF YOUR S3 BUCKET'
+base_s3_directory = 'BUCKET_DIRECTORY'
 
 # Default to 'us-east-1' if region is not known
-region_name = 'eu-north-1'
+region_name = 'YOUR_REGION'
 
 # Initialize the S3 client
 s3_client = boto3.client(
