@@ -1,0 +1,61 @@
+version: 2
+
+models:
+  - name: stg_dim_customer
+    description: "Staging model for customer data, preparing it for the dim_customer dimension table."
+    config:
+      materialized: 'incremental'
+      alias: 'stg_dim_customer'
+      schema: "{{ var('silver_schema') }}"
+      unique_key: 'customer_id'
+    columns:
+      - name: customer_id
+        description: "Unique identifier for the customer."
+        tests:
+          - unique
+          - not_null
+
+      - name: first_name
+        description: "The customer's first name."
+        tests:
+          - not_null
+
+      - name: last_name
+        description: "The customer's last name."
+        tests:
+          - not_null
+
+      - name: email
+        description: "The customer's email address."
+        tests:
+          - not_null
+
+      - name: address
+        description: "The customer's street address."
+        tests:
+          - not_null
+
+      - name: city
+        description: "The city of the customer's address."
+        tests:
+          - not_null
+
+      - name: state
+        description: "The state of the customer's address."
+        tests:
+          - not_null
+
+      - name: postal_code
+        description: "The postal code of the customer's address."
+        tests:
+          - not_null
+
+      - name: phone_number
+        description: "The customer's phone number."
+        tests:
+          - not_null
+
+      - name: created_at
+        description: "Timestamp when the record was created in the data warehouse."
+        tests:
+          - not_null

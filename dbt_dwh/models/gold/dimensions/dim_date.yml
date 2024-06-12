@@ -1,0 +1,34 @@
+version 2:
+
+models:
+    - name: dim_date
+      description: "A table containing date information."
+      columns:
+        - name: date_id
+          description: "The original date ID."
+          tests:
+          - not_null
+        - name: date
+          description: "The date in the format YYYY-MM-DD."
+          tests:
+          - not_null
+        - name: day
+          description: "The day of the month."
+          tests:
+          - not_null
+        - name: month
+          description: "The month of the year."
+          tests:
+          - not_null
+        - name: year
+          description: "The year."
+          tests:
+          - not_null
+        - name: week_day
+          description: "The day of the week."
+          tests:
+          - not_null
+        - name: created_at
+          description: "The date the date was created."
+          tests:
+          - not_null

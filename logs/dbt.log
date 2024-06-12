@@ -1,0 +1,220 @@
+[0m03:04:58.424722 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10874e7d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108785dd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1087865d0>]}
+
+
+============================== 03:04:58.427571 | fd159003-ed03-47de-bdb0-cf80eb5f357d ==============================
+[0m03:04:58.427571 [info ] [MainThread]: Running with dbt=1.8.1
+[0m03:04:58.427918 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/Users/divinesam/.dbt', 'log_path': 'logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt init', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m03:05:10.021873 [debug] [MainThread]: Starter project path: /Users/divinesam/dbt_redshift/.venv/lib/python3.11/site-packages/dbt/include/starter_project
+[0m03:05:10.028072 [info ] [MainThread]: 
+Your new dbt project "dbt_dwh" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m03:05:10.028496 [info ] [MainThread]: Setting up your profile.
+[0m03:05:13.047790 [debug] [MainThread]: Redshift adapter: Setting redshift_connector to ERROR
+[0m03:05:13.048120 [debug] [MainThread]: Redshift adapter: Setting redshift_connector.core to ERROR
+[0m03:06:08.811698 [info ] [MainThread]: Profile dbt_dwh written to /Users/divinesam/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m03:06:08.815439 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 70.42637, "process_user_time": 0.796412, "process_kernel_time": 0.147968, "process_mem_max_rss": "97943552", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m03:06:08.816293 [debug] [MainThread]: Command `dbt init` succeeded at 03:06:08.816152 after 70.43 seconds
+[0m03:06:08.816897 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108786150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108786910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103264d10>]}
+[0m03:06:08.817346 [debug] [MainThread]: Flushing usage events
+[0m03:06:15.883863 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106a66f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106aaf490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ad2910>]}
+
+
+============================== 03:06:15.886849 | 707d21c0-99db-474a-8ac3-88493e753d30 ==============================
+[0m03:06:15.886849 [info ] [MainThread]: Running with dbt=1.8.1
+[0m03:06:15.887199 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'profiles_dir': '/Users/divinesam/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt debug', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m03:06:15.897911 [info ] [MainThread]: dbt version: 1.8.1
+[0m03:06:15.898266 [info ] [MainThread]: python version: 3.11.8
+[0m03:06:15.898451 [info ] [MainThread]: python path: /Users/divinesam/dbt_redshift/.venv/bin/python
+[0m03:06:15.898608 [info ] [MainThread]: os info: macOS-14.2.1-arm64-arm-64bit
+[0m03:06:15.955900 [debug] [MainThread]: Redshift adapter: Setting redshift_connector to ERROR
+[0m03:06:15.956217 [debug] [MainThread]: Redshift adapter: Setting redshift_connector.core to ERROR
+[0m03:06:15.984000 [info ] [MainThread]: Using profiles dir at /Users/divinesam/.dbt
+[0m03:06:15.984265 [info ] [MainThread]: Using profiles.yml file at /Users/divinesam/.dbt/profiles.yml
+[0m03:06:15.984429 [info ] [MainThread]: Using dbt_project.yml file at /Users/divinesam/dbt_redshift/dbt_project.yml
+[0m03:06:15.984635 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m03:06:15.985450 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 0.13583879, "process_user_time": 0.664837, "process_kernel_time": 0.096297, "process_mem_max_rss": "107593728", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m03:06:15.985717 [debug] [MainThread]: Command `dbt debug` failed at 03:06:15.985672 after 0.14 seconds
+[0m03:06:15.985894 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ad2150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ad2090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106b58310>]}
+[0m03:06:15.986075 [debug] [MainThread]: Flushing usage events
+[0m03:07:12.748500 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1037bf510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104d29650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104d29e50>]}
+
+
+============================== 03:07:12.751758 | 9157dafc-0cfe-4752-ad90-23a47b9e4888 ==============================
+[0m03:07:12.751758 [info ] [MainThread]: Running with dbt=1.8.1
+[0m03:07:12.752169 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'profiles_dir': '/Users/divinesam/.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m03:07:12.762279 [info ] [MainThread]: dbt version: 1.8.1
+[0m03:07:12.762684 [info ] [MainThread]: python version: 3.11.8
+[0m03:07:12.762866 [info ] [MainThread]: python path: /Users/divinesam/dbt_redshift/.venv/bin/python
+[0m03:07:12.763029 [info ] [MainThread]: os info: macOS-14.2.1-arm64-arm-64bit
+[0m03:07:12.820016 [debug] [MainThread]: Redshift adapter: Setting redshift_connector to ERROR
+[0m03:07:12.820303 [debug] [MainThread]: Redshift adapter: Setting redshift_connector.core to ERROR
+[0m03:07:12.856217 [info ] [MainThread]: Using profiles dir at /Users/divinesam/.dbt
+[0m03:07:12.856487 [info ] [MainThread]: Using profiles.yml file at /Users/divinesam/.dbt/profiles.yml
+[0m03:07:12.856651 [info ] [MainThread]: Using dbt_project.yml file at /Users/divinesam/dbt_redshift/dbt_project.yml
+[0m03:07:12.856877 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m03:07:12.858505 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 0.1439233, "process_user_time": 0.65253, "process_kernel_time": 0.119575, "process_mem_max_rss": "108019712", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m03:07:12.858821 [debug] [MainThread]: Command `dbt debug` failed at 03:07:12.858768 after 0.14 seconds
+[0m03:07:12.859017 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104d28ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10149ce50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10149ce10>]}
+[0m03:07:12.859204 [debug] [MainThread]: Flushing usage events
+[0m03:15:41.449937 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108956a50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108957450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1089d2b50>]}
+
+
+============================== 03:15:41.453008 | 16db3724-ac64-432a-8525-6406b806f3b3 ==============================
+[0m03:15:41.453008 [info ] [MainThread]: Running with dbt=1.8.1
+[0m03:15:41.453355 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/divinesam/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt debug', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m03:15:41.463871 [info ] [MainThread]: dbt version: 1.8.1
+[0m03:15:41.464272 [info ] [MainThread]: python version: 3.11.8
+[0m03:15:41.464464 [info ] [MainThread]: python path: /Users/divinesam/dbt_redshift/.venv/bin/python
+[0m03:15:41.464628 [info ] [MainThread]: os info: macOS-14.2.1-arm64-arm-64bit
+[0m03:15:41.524820 [debug] [MainThread]: Redshift adapter: Setting redshift_connector to ERROR
+[0m03:15:41.525139 [debug] [MainThread]: Redshift adapter: Setting redshift_connector.core to ERROR
+[0m03:15:41.560230 [info ] [MainThread]: Using profiles dir at /Users/divinesam/.dbt
+[0m03:15:41.560642 [info ] [MainThread]: Using profiles.yml file at /Users/divinesam/.dbt/profiles.yml
+[0m03:15:41.560847 [info ] [MainThread]: Using dbt_project.yml file at /Users/divinesam/dbt_redshift/dbt_project.yml
+[0m03:15:41.561223 [info ] [MainThread]: adapter type: redshift
+[0m03:15:41.561378 [info ] [MainThread]: adapter version: 1.8.0
+[0m03:15:41.561528 [info ] [MainThread]: Configuration:
+[0m03:15:41.561664 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m03:15:41.561800 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m03:15:41.561930 [info ] [MainThread]: Required dependencies:
+[0m03:15:41.562091 [debug] [MainThread]: Executing "git --help"
+[0m03:15:41.575560 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m03:15:41.576113 [debug] [MainThread]: STDERR: "b''"
+[0m03:15:41.576315 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m03:15:41.576497 [info ] [MainThread]: Connection:
+[0m03:15:41.576691 [info ] [MainThread]:   host: redshift-cluster-1.ccs1xzokvxzt.eu-north-1.redshift.amazonaws.com
+[0m03:15:41.576829 [info ] [MainThread]:   user: awsuser
+[0m03:15:41.576963 [info ] [MainThread]:   port: 5439
+[0m03:15:41.577089 [info ] [MainThread]:   database: dev
+[0m03:15:41.577225 [info ] [MainThread]:   method: database
+[0m03:15:41.577359 [info ] [MainThread]:   cluster_id: None
+[0m03:15:41.577492 [info ] [MainThread]:   iam_profile: None
+[0m03:15:41.577622 [info ] [MainThread]:   schema: dev_bronze
+[0m03:15:41.577755 [info ] [MainThread]:   sslmode: prefer
+[0m03:15:41.577884 [info ] [MainThread]:   region: None
+[0m03:15:41.578012 [info ] [MainThread]:   sslmode: prefer
+[0m03:15:41.578140 [info ] [MainThread]:   region: None
+[0m03:15:41.578264 [info ] [MainThread]:   iam_profile: None
+[0m03:15:41.578392 [info ] [MainThread]:   autocreate: False
+[0m03:15:41.578516 [info ] [MainThread]:   db_groups: []
+[0m03:15:41.578641 [info ] [MainThread]:   ra3_node: False
+[0m03:15:41.578766 [info ] [MainThread]:   connect_timeout: None
+[0m03:15:41.578889 [info ] [MainThread]:   role: None
+[0m03:15:41.579016 [info ] [MainThread]:   retries: 1
+[0m03:15:41.579139 [info ] [MainThread]:   autocommit: True
+[0m03:15:41.579442 [info ] [MainThread]: Registered adapter: redshift=1.8.0
+[0m03:15:41.584210 [debug] [MainThread]: Acquiring new redshift connection 'debug'
+[0m03:15:41.588133 [debug] [MainThread]: Using redshift connection "debug"
+[0m03:15:41.588329 [debug] [MainThread]: On debug: select 1 as id
+[0m03:15:41.588487 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m03:15:41.591063 [debug] [MainThread]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m03:15:41.591557 [debug] [MainThread]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m03:15:43.110174 [debug] [MainThread]: Redshift adapter: Error running SQL: select 1 as id
+[0m03:15:43.111772 [debug] [MainThread]: Redshift adapter: Rolling back transaction.
+[0m03:15:43.112677 [debug] [MainThread]: On debug: No close available on handle
+[0m03:15:43.113439 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m03:15:43.114307 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m03:15:43.114830 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/divinesam/dbt_redshift/dbt_project.yml> not found
+
+[0m03:15:43.115352 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  {'S': 'FATAL', 'C': '28000', 'M': 'password authentication failed for user "awsuser"', 'F': '../src/pg/src/backend/libpq/auth.c', 'L': '425', 'R': 'auth_failed'}
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m03:15:43.119616 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 1.7090453, "process_user_time": 0.725095, "process_kernel_time": 0.153177, "process_mem_max_rss": "111181824", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m03:15:43.120478 [debug] [MainThread]: Command `dbt debug` failed at 03:15:43.120354 after 1.71 seconds
+[0m03:15:43.120905 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m03:15:43.121303 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1089d2910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10899e310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10945d010>]}
+[0m03:15:43.121747 [debug] [MainThread]: Flushing usage events
+[0m03:16:04.754727 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x101bf7cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104699cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10469a4d0>]}
+
+
+============================== 03:16:04.757412 | 5369a13e-ecb0-4caa-82ea-7daef7b4be01 ==============================
+[0m03:16:04.757412 [info ] [MainThread]: Running with dbt=1.8.1
+[0m03:16:04.757747 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/Users/divinesam/.dbt', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt debug', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m03:16:04.765851 [info ] [MainThread]: dbt version: 1.8.1
+[0m03:16:04.766171 [info ] [MainThread]: python version: 3.11.8
+[0m03:16:04.766355 [info ] [MainThread]: python path: /Users/divinesam/dbt_redshift/.venv/bin/python
+[0m03:16:04.766516 [info ] [MainThread]: os info: macOS-14.2.1-arm64-arm-64bit
+[0m03:16:04.819801 [debug] [MainThread]: Redshift adapter: Setting redshift_connector to ERROR
+[0m03:16:04.820099 [debug] [MainThread]: Redshift adapter: Setting redshift_connector.core to ERROR
+[0m03:16:04.853571 [info ] [MainThread]: Using profiles dir at /Users/divinesam/.dbt
+[0m03:16:04.853847 [info ] [MainThread]: Using profiles.yml file at /Users/divinesam/.dbt/profiles.yml
+[0m03:16:04.854009 [info ] [MainThread]: Using dbt_project.yml file at /Users/divinesam/dbt_redshift/dbt_project.yml
+[0m03:16:04.854370 [info ] [MainThread]: adapter type: redshift
+[0m03:16:04.854519 [info ] [MainThread]: adapter version: 1.8.0
+[0m03:16:04.854669 [info ] [MainThread]: Configuration:
+[0m03:16:04.854803 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m03:16:04.854958 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m03:16:04.855088 [info ] [MainThread]: Required dependencies:
+[0m03:16:04.855243 [debug] [MainThread]: Executing "git --help"
+[0m03:16:04.871916 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m03:16:04.872531 [debug] [MainThread]: STDERR: "b''"
+[0m03:16:04.872751 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m03:16:04.872947 [info ] [MainThread]: Connection:
+[0m03:16:04.873175 [info ] [MainThread]:   host: redshift-cluster-1.ccs1xzokvxzt.eu-north-1.redshift.amazonaws.com
+[0m03:16:04.873322 [info ] [MainThread]:   user: awsuser
+[0m03:16:04.873460 [info ] [MainThread]:   port: 5439
+[0m03:16:04.873597 [info ] [MainThread]:   database: dev
+[0m03:16:04.873742 [info ] [MainThread]:   method: database
+[0m03:16:04.873876 [info ] [MainThread]:   cluster_id: None
+[0m03:16:04.874012 [info ] [MainThread]:   iam_profile: None
+[0m03:16:04.874143 [info ] [MainThread]:   schema: dev_bronze
+[0m03:16:04.874274 [info ] [MainThread]:   sslmode: prefer
+[0m03:16:04.874405 [info ] [MainThread]:   region: None
+[0m03:16:04.874535 [info ] [MainThread]:   sslmode: prefer
+[0m03:16:04.874665 [info ] [MainThread]:   region: None
+[0m03:16:04.874796 [info ] [MainThread]:   iam_profile: None
+[0m03:16:04.874929 [info ] [MainThread]:   autocreate: False
+[0m03:16:04.875059 [info ] [MainThread]:   db_groups: []
+[0m03:16:04.875185 [info ] [MainThread]:   ra3_node: False
+[0m03:16:04.875313 [info ] [MainThread]:   connect_timeout: None
+[0m03:16:04.875438 [info ] [MainThread]:   role: None
+[0m03:16:04.875562 [info ] [MainThread]:   retries: 1
+[0m03:16:04.875689 [info ] [MainThread]:   autocommit: True
+[0m03:16:04.876044 [info ] [MainThread]: Registered adapter: redshift=1.8.0
+[0m03:16:04.880442 [debug] [MainThread]: Acquiring new redshift connection 'debug'
+[0m03:16:04.884224 [debug] [MainThread]: Using redshift connection "debug"
+[0m03:16:04.884538 [debug] [MainThread]: On debug: select 1 as id
+[0m03:16:04.884790 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m03:16:04.887589 [debug] [MainThread]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m03:16:04.888165 [debug] [MainThread]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m03:16:07.292948 [debug] [MainThread]: SQL status: SUCCESS in 2.0 seconds
+[0m03:16:07.297042 [debug] [MainThread]: On debug: Close
+[0m03:16:07.298269 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m03:16:07.298949 [info ] [MainThread]: [31m1 check failed:[0m
+[0m03:16:07.299452 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/divinesam/dbt_redshift/dbt_project.yml> not found
+
+[0m03:16:07.304656 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 2.5805972, "process_user_time": 0.723216, "process_kernel_time": 0.134553, "process_mem_max_rss": "110837760", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m03:16:07.305375 [debug] [MainThread]: Command `dbt debug` failed at 03:16:07.305263 after 2.58 seconds
+[0m03:16:07.305746 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m03:16:07.306092 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104666110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10469a090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105125990>]}
+[0m03:16:07.306491 [debug] [MainThread]: Flushing usage events

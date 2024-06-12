@@ -1,0 +1,52 @@
+version: 2
+
+models:
+  - name: stg_dim_account
+    description: "Staging model for account data. This model extracts account information from the source system, applies necessary transformations, and prepares it for loading into the `dim_account` dimension table."
+    config:
+      materialized: 'incremental'
+      alias: 'stg_dim_account'
+      schema: "{{ var('silver_schema') }}"
+      unique_key: 'account_id'
+    columns:
+      - name: account_id
+        description: "Unique identifier for the account."
+        tests:
+          - unique
+          - not_null
+
+      - name: customer_id
+        description: "Identifier for the customer associated with the account."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_customer')
+              field: customer_id
+
+      - name: account_number
+        description: "The account number as assigned in the source system. Should be unique across all accounts."
+        tests:
+          - unique
+          - not_null
+
+      - name: account_type
+        description: "Type of the account (e.g., savings, checking, loan)."
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['savings', 'checking', 'loan', 'investment']
+
+      - name: account_balance
+        description: "Current balance of the account."
+        tests:
+          - not_null
+
+      - name: credit_score
+        description: "Credit score associated with the account, indicating the creditworthiness of the account holder."
+        tests:
+          - not_null
+
+      - name: created_at
+        description: "Timestamp when the record was created or ingested into the data warehouse."
+        tests:
+          - not_null

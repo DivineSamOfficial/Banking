@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: stg_dim_channel
+    description: "Staging model for channel data, preparing it for the dim_channel dimension table."
+    config:
+      materialized: 'incremental'
+      alias: 'stg_dim_channel'
+      schema: "{{ var('silver_schema') }}"
+      unique_key: 'channel_id'
+    columns:
+      - name: channel_id
+        description: "Unique identifier for the channel."
+        tests:
+          - unique
+          - not_null
+
+      - name: channel_name
+        description: "Name of the channel."
+        tests:
+          - not_null
+
+      - name: created_at
+        description: "Timestamp when the record was created in the data warehouse."
+        tests:
+          - not_null

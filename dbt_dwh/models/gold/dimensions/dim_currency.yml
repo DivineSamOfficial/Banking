@@ -1,0 +1,22 @@
+version 2:
+
+models:
+  - name: dim_currency
+    description: "A table containing currency information."
+    columns:
+      - name: currency_id
+        description: "The original currency ID."
+        tests:
+          - not_null
+      - name: currency_code
+        description: "The currency code, in uppercase."
+        tests:
+          - not_null
+      - name: currency_name
+        description: "The currency name, with the first letter of each word capitalized."
+        tests:
+          - not_null
+      - name: created_at
+        description: "The date the currency was created."
+        tests:
+          - not_null

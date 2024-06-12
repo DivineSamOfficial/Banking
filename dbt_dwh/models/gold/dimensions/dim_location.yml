@@ -1,0 +1,32 @@
+version 2:
+
+models:
+  - name: dim_location
+    description: "A dimension table for locations."
+    columns:
+      - name: location_id
+        description: "The primary key for the location dimension."
+        tests:
+          - unique
+          - not_null
+
+      - name: city
+        description: "The city of the location."
+        tests:
+          - not_null
+      - name: state
+        description: "The state of the location."
+        tests:
+          - not_null
+      - name: postal_code
+        description: "The postal code of the location."
+        tests:
+          - not_null
+      - name: country
+        description: "The country of the location."
+        tests:
+          - not_null
+      - name: created_at
+        description: "The date the location was created."
+        tests:
+          - not_null

@@ -1,0 +1,40 @@
+version 2:
+
+models:
+  - name: dim_account
+    description: "A dimensin table for accounts."
+    columns:
+      - name: account_id
+        description: "The primary key for the account dimennsion."
+        tests:
+          - unique
+          - not_null
+
+      - name: customer_id
+        description: "Foreign key to the customer dimension."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_customer')
+              field: customer_id
+      - name: account_number
+        description: "The account number, should be unique."
+        tests:
+          - unique
+          - not_null
+      - name: account_type
+        description: "The type of account."
+        tests:
+          - not_null
+      - name: account_balance
+        description: "The balance of the account."
+        tests:
+          - not_null
+      - name: credit_score
+        description: "The credit score associated with the account."
+        tests:
+          - not_null
+      - name: created_at
+        description: "The date the account was created."
+        tests:
+          - not_null

@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: stg_dim_currency
+    description: "Staging model for currency data, preparing it for the dim_currency dimension table."
+    config:
+      materialized: 'incremental'
+      alias: 'stg_dim_currency'
+      schema: "{{ var('silver_schema') }}"
+      unique_key: 'currency_id'
+    columns:
+      - name: currency_id
+        description: "Unique identifier for the currency."
+        tests:
+          - unique
+          - not_null
+
+      - name: currency_code
+        description: "The ISO code representing the currency."
+        tests:
+          - not_null
+
+      - name: currency_name
+        description: "The full name of the currency."
+        tests:
+          - not_null
+
+      - name: created_at
+        description: "Timestamp when the record was created in the data warehouse."
+        tests:
+          - not_null

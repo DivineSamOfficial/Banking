@@ -1,0 +1,81 @@
+version: 2
+
+models:
+  - name: stg_fact_transactions
+    description: "Staging model for transaction data, capturing all aspects of transactions including types, channels, locations, accounts, currencies, amounts, and statuses. Designed for incremental updates with a delete-and-insert strategy to ensure data is current."
+    config:
+      materialized: 'table'
+      alias: 'stg_fact_transactions'
+      schema: "{{ var('silver_schema') }}"
+      incremental_strategy: 'delete+insert'
+      primary_key: 'transaction_id'
+      distribution: 'even'
+    columns:
+      - name: transaction_id
+        description: "The unique identifier for each transaction."
+        tests:
+          - unique
+          - not_null
+
+      - name: date_id
+        description: "Foreign key to the dim_date dimension, representing the date of the transaction."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_date')
+              field: date_id
+
+      - name: transaction_type_id
+        description: "Foreign key to the dim_transaction_type dimension, indicating the type of transaction."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_transaction_type')
+              field: transaction_type_id
+
+      - name: channel_id
+        description: "Foreign key to the dim_channel dimension, indicating the channel through which the transaction was conducted."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_channel')
+              field: channel_id
+
+      - name: location_id
+        description: "Foreign key to the dim_location dimension, indicating the location associated with the transaction."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_location')
+              field: location_id
+
+      - name: account_id
+        description: "Foreign key to the dim_account dimension, identifying the account involved in the transaction."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_account')
+              field: account_id
+
+      - name: currency_id
+        description: "Foreign key to the dim_currency dimension, indicating the currency used for the transaction."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_currency')
+              field: currency_id
+
+      - name: transaction_amount
+        description: "The amount of the transaction."
+        tests:
+          - not_null
+
+      - name: transaction_status
+        description: "The status of the transaction (e.g., completed, pending, failed)."
+        tests:
+          - not_null
+
+      - name: created_at
+        description: "Timestamp when the record was created or last updated in the data warehouse. This field is populated using the database's current timestamp at the time of data loading."
+        tests:
+          - not_null

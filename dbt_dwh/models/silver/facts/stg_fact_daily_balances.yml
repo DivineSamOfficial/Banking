@@ -1,0 +1,54 @@
+version: 2
+
+models:
+  - name: stg_fact_daily_balances
+    description: "Staging model for daily account balances, capturing the opening, closing, and average balances for each account on a daily basis. This model supports incremental updates with a delete-and-insert strategy to ensure data freshness."
+    config:
+      materialized: 'table'
+      alias: 'stg_fact_daily_balances'
+      schema: "{{ var('silver_schema') }}"
+      incremental_strategy: 'delete+insert'
+      primary_key: 'balance_id'
+      distribution: 'even'
+    columns:
+      - name: balance_id
+        description: "The unique identifier for each daily balance record."
+        tests:
+          - unique
+          - not_null
+
+      - name: date_id
+        description: "Foreign key to the dim_date dimension, representing the date for which the balance is recorded."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_date')
+              field: date_id
+
+      - name: account_id
+        description: "Foreign key to the dim_account dimension, identifying the account associated with the balance."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_account')
+              field: account_id
+
+      - name: opening_balance
+        description: "The account's opening balance for the day."
+        tests:
+          - not_null
+
+      - name: closing_balance
+        description: "The account's closing balance for the day."
+        tests:
+          - not_null
+
+      - name: average_balance
+        description: "The account's average balance calculated for the day."
+        tests:
+          - not_null
+
+      - name: created_at
+        description: "Timestamp when the record was created or last updated in the data warehouse. This field is populated using the database's current timestamp at the time of data loading."
+        tests:
+          - not_null

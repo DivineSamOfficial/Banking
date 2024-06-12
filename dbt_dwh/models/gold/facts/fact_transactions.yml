@@ -1,0 +1,76 @@
+version: 2
+
+models:
+  - name: fact_transactions
+    description: "This table captures all transactional data, including the transaction type, channel, location, account, and currency involved, as well as the transaction amount and status."
+    config:
+      materialized: 'table'
+      alias: 'fact_transactions'
+      schema: "{{ var('gold_schema') }}"
+      incremental_strategy: 'delete+insert'
+      primary_key: 'transaction_id'
+      distribution: 'even'
+    columns:
+      - name: transaction_id
+        description: "The unique identifier for each transaction."
+        tests:
+          - unique
+          - not_null
+
+      - name: date_id
+        description: "The foreign key to the dim_date dimension table, indicating the date of the transaction."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_date')
+              field: date_id
+
+      - name: transaction_type_id
+        description: "The foreign key to the dim_transaction_type dimension table, indicating the type of transaction."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_transaction_type')
+              field: transaction_type_id
+
+      - name: channel_id
+        description: "The foreign key to the dim_channel dimension table, indicating the channel through which the transaction was made."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_channel')
+              field: channel_id
+
+      - name: location_id
+        description: "The foreign key to the dim_location dimension table, indicating the location of the transaction."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_location')
+              field: location_id
+
+      - name: account_id
+        description: "The foreign key to the dim_account dimension table, identifying the account involved in the transaction."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_account')
+              field: account_id
+
+      - name: currency_id
+        description: "The foreign key to the dim_currency dimension table, indicating the currency used in the transaction."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_currency')
+              field: currency_id
+
+      - name: transaction_amount
+        description: "The amount of the transaction."
+        tests:
+          - not_null
+
+      - name: transaction_status
+        description: "The status of the transaction (e.g., completed, pending, failed)."
+        tests:
+          - not_null

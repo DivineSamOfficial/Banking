@@ -1,0 +1,56 @@
+version 2:
+
+models:
+  - name: dim_customer
+    description: "A dimension table for customers."
+    columns:
+      - name: customer_id
+        description: "The primary key for the customer dimension."
+        tests:
+          - unique
+          - not_null
+
+      - name: first_name
+        description: "The first name of the customer."
+        tests:
+          - not_null
+
+      - name: last_name
+        description: "The last name of the customer."
+        tests:
+          - not_null
+
+      - name: email
+        description: "The email address of the customer."
+        tests:
+          - not_null
+
+      - name: phone_number
+        description: "The phone number of the customer."
+        tests:
+          - not_null
+
+      - name: address
+        description: "The address of the customer."
+        tests:
+          - not_null
+
+      - name: city
+        description: "The city of the customer."
+        tests:
+          - not_null
+
+      - name: state
+        description: "The state of the customer."
+        tests:
+          - not_null
+
+      - name: postal_code
+        description: "The postal code of the customer."
+        tests:
+          - not_null
+
+      - name: created_at
+        description: "The date the customer was created."
+        tests:
+          - not_null
