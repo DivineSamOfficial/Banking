@@ -21,8 +21,3 @@ This project demonstrates an end-to-end data pipeline specifically designed for 
 - **dbt**: For data transformation and modeling.
 - **Python**: For data generation scripts.
 
-## Setup Instructions
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
-   cd your-repo-name
