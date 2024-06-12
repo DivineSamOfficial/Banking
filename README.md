@@ -1,6 +1,6 @@
 # Banking Data Warehouse Pipeline
 
-![Project Workflow](path/to/your/image.png)
+![Project Workflow](sysArch.jpg)
 
 ## Project Overview
 This project demonstrates an end-to-end data pipeline specifically designed for banking data using AWS and dbt. The goal is to ingest, process, and analyze banking data efficiently, catering to various data consumers such as Data Analysts, Data Scientists, BI Developers, and Operations Teams.
